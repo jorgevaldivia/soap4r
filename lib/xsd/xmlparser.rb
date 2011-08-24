@@ -64,7 +64,7 @@ loaded = false
     # XXX: MUST BE REMOVED IN THE FUTURE
     name = lib.sub(/^.*\//, '')
     raise LoadError unless XSD::XMLParser.constants.find { |c|
-      c.downcase == name
+      c.to_s.downcase == name # jvsa@2011-08-24 M Added .to_s to fix error: "XML processor module not found"
     }
     loaded = true
     break
