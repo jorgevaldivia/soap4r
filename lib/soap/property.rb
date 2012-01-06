@@ -322,12 +322,12 @@ end
 # for ruby/1.6.
 unless Enumerable.instance_methods.include?('inject')
   module Enumerable
-    def inject(init)
-      result = init
-      each do |item|
-	result = yield(result, item)
-      end
-      result
-    end
+#    def inject(init)
+#      result = init
+#      each do |item|
+#	result = yield(result, item)
+#      end
+#      result
+#    end
   end
 end
